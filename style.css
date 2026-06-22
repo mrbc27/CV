@@ -1,6 +1,27 @@
 body{
     background-color: #0f172a;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+}
+
+footer{
+    width: 100%;
 }
 
 /*--------- Nav Bar---------*/
@@ -8,16 +29,18 @@ body{
 
 nav{
     display: flex;
-    
+    width: 100%;
     background-color: #0b1120;
     font-family: 'Sora';
     color: antiquewhite;
+    padding: 12px 20px;
+    align-items: center;
+    height: 60px;
 }
 
 nav img{
     width: 150px;
-    height: fit-content;
-
+    height: auto;
 }
 
 .liens a{
@@ -39,17 +62,24 @@ nav img{
 
 .liens{
     display: flex;
-    width:80%;
+    flex: 1;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
     gap: 30px;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 .logo_nom{
     display: flex;
-    width: 20%;
     align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.logo_nom h2 {
+    margin: 0;
+    font-size: 18px;
+    white-space: nowrap;
 }
 
 .liens a:hover{
@@ -143,7 +173,7 @@ nav img{
 
 #bouton img{
     width: 50px;
-    height: fit-content;
+    height: auto;
 }
 
 #bouton a {
@@ -203,12 +233,228 @@ nav img{
         justify-content: center;
     }
 
+    #image img{
+        width: 250px;
+        margin-right: 0;
+    }
+
     #description{
+        width: 100%;
+    }
+
+    .infos{
+        padding: 20px;
+    }
+
+    .infosGrid{
+        flex-direction: column;
+    }
+
+    .infoPerso, .competences{
         width: 100%;
     }
 }
 
-/*------- Section INFO ------*/
+@media (max-width: 640px) {
+    nav img{
+        width: 100px;
+    }
+
+    .liens{
+        gap: 8px;
+        margin-right: 0;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    .liens a{
+        font-size: 12px;
+    }
+
+    #download{
+        width: 120px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    #nom{
+        font-size: 48px;
+        margin-bottom: -10px;
+    }
+
+    #stage{
+        font-size: 24px;
+    }
+
+    #dvpweb{
+        font-size: 18px;
+    }
+
+    #description{
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #image img{
+        width: 220px;
+        margin-right: 0;
+    }
+
+    .intro{
+        padding: 20px 12px;
+        margin-left: 0;
+    }
+
+    .competences{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .container{
+        grid-template-columns: 1fr !important;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .compRow{
+        grid-template-columns: 40px 1fr 50px;
+        gap: 8px;
+    }
+
+    li{
+        font-size: 14px;
+        margin: 0 0 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 8px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    .logo_nom {
+        width: 100%;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #21304d;
+    }
+
+    .logo_nom h2 {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .liens {
+        width: 100%;
+        gap: 4px;
+        margin-right: 0;
+    }
+
+    .liens a {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    #download {
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+        padding: 0 4px;
+    }
+
+    .intro {
+        flex-direction: column;
+        padding: 12px 8px;
+        gap: 20px;
+    }
+
+    #pres {
+        margin-left: 0;
+    }
+
+    #bonjour {
+        font-size: 12px;
+    }
+
+    #nom {
+        font-size: 28px;
+        margin-bottom: -5px;
+    }
+
+    #stage {
+        font-size: 16px;
+    }
+
+    #dvpweb {
+        font-size: 14px;
+    }
+
+    #description {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    #image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #image img {
+        width: 180px !important;
+    }
+
+    .infos {
+        padding: 12px;
+    }
+
+    .infosGrid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .infoPerso,
+    .competences {
+        width: 100%;
+    }
+
+    .sectionTitle {
+        font-size: 20px;
+    }
+
+    .infoRow {
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .containerPresentation {
+        flex-direction: column;
+        width: 100%;
+        margin: 12px 0;
+    }
+
+    .icone,
+    .iconeOrdi {
+        width: 100%;
+    }
+
+    .presentationText {
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding: 0 8px;
+    }
+}
+
 
 .infos{
     padding: 20px 60px;
@@ -261,6 +507,7 @@ nav img{
 
 .infoPerso img{
     width: 50px;
+    height: auto;
 }
 
 .infoPerso p{
@@ -334,6 +581,7 @@ nav img{
 
 .competences img{
     width: 50px;
+    height: auto;
 }
 
 .skillContent{
@@ -422,8 +670,311 @@ nav img{
 
 #github img{
     width: 50px;
-    height: fit-content;
+    height: auto;
 }
 
+main{
+    width: 100%;
+    overflow-x: hidden;
+}
 
+@media (min-width: 1200px) {
+    .intro,
+    .infos,
+    .presentation{
+        max-width: 1280px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
+@media (max-width: 1100px) {
+    nav{
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .liens{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-right: 0;
+    }
+
+    .liens a{
+        font-size: 16px;
+    }
+
+    .intro{
+        padding: 36px 24px;
+    }
+
+    #pres{
+        margin-left: 0;
+    }
+
+    #nom{
+        font-size: clamp(42px, 8vw, 72px);
+    }
+
+    #stage{
+        font-size: clamp(24px, 4vw, 38px);
+    }
+
+    #description{
+        max-width: 650px;
+        width: 100%;
+    }
+
+    .infosGrid,
+    .competencesGrid{
+        align-items: stretch;
+    }
+
+    .infoPerso,
+    .competences{
+        width: min(100%, 500px);
+    }
+
+    .containerPresentation{
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 700px) {
+    nav{
+        justify-content: center;
+        padding: 10px 12px;
+    }
+
+    .logo_nom{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .liens{
+        width: 100%;
+    }
+
+    .liens a:hover{
+        transform: none;
+    }
+
+    #download{
+        width: auto;
+        min-width: 150px;
+        padding: 0 12px;
+    }
+
+    .intro{
+        align-items: center;
+        text-align: center;
+    }
+
+    #bonjour,
+    #nom,
+    #stage,
+    #dvpweb{
+        margin: 0 0 10px;
+    }
+
+    #bouton{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .infos{
+        padding: 16px;
+    }
+
+    .infoRow{
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .infoPerso img,
+    .competences img{
+        width: 36px;
+    }
+
+    .containerPresentation{
+        width: calc(100% - 24px);
+        flex-direction: column;
+        margin: 12px;
+        padding: 16px;
+        text-align: left;
+    }
+
+    .icone,
+    .iconeOrdi{
+        margin: 8px;
+    }
+
+    .presentationText{
+        letter-spacing: 0;
+        line-height: 1.6;
+    }
+
+    #github{
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .liens a{
+        font-size: 10px;
+        padding: 4px 5px;
+    }
+
+    #download{
+        min-width: 0;
+        width: 100%;
+        max-width: 180px;
+    }
+
+    #nom{
+        font-size: 26px;
+    }
+
+    .sectionTitle{
+        font-size: 22px;
+    }
+
+    .compRow{
+        grid-template-columns: 30px 1fr 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav{
+        height: auto;
+    }
+
+    .liens{
+        justify-content: center;
+    }
+
+    #download{
+        width: 100%;
+        max-width: 180px;
+        min-height: 28px;
+        height: auto;
+        text-align: center;
+    }
+}
+
+/* Navigation commune a toutes les pages */
+nav{
+    min-height: 72px;
+    height: auto;
+    padding: 12px 20px;
+    gap: 16px;
+}
+
+nav .logo_nom img{
+    width: 110px;
+    height: 48px;
+    object-fit: contain;
+}
+
+nav .liens{
+    gap: 24px;
+}
+
+nav .liens a{
+    font-size: 18px;
+}
+
+nav #download{
+    width: 180px;
+    min-height: 34px;
+    height: auto;
+    text-align: center;
+    padding: 6px 12px;
+}
+
+/* Dimensions fixes pour eviter les icones deformees sur Safari iOS */
+#bouton img,
+.infoPerso img,
+.competences img,
+.icone img,
+.iconeOrdi img,
+#github img{
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
+#bouton img{
+    width: 44px;
+    height: 44px;
+}
+
+.infoPerso img,
+.competences img{
+    width: 42px;
+    height: 42px;
+}
+
+.icone img,
+.iconeOrdi img{
+    width: 92px;
+    height: 92px;
+}
+
+#github img{
+    width: 44px;
+    height: 44px;
+}
+
+@media (max-width: 700px) {
+    nav{
+        min-height: 112px;
+        justify-content: center;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    nav .logo_nom{
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0 0 8px;
+    }
+
+    nav .logo_nom img{
+        width: 88px;
+        height: 38px;
+    }
+
+    nav .liens{
+        width: 100%;
+        justify-content: center;
+        gap: 8px 12px;
+    }
+
+    nav .liens a{
+        font-size: 12px;
+    }
+
+    nav #download{
+        width: auto;
+        min-width: 150px;
+        min-height: 30px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    nav .liens a{
+        font-size: 10px;
+    }
+
+    nav #download{
+        width: 100%;
+        max-width: 180px;
+    }
+}

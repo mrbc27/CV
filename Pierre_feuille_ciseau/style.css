@@ -8,6 +8,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: radial-gradient(circle at top, #1f2937 0%, #0f172a 55%, #020617 100%);
     color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    align-items: center;
 }
 
 .app {
@@ -127,6 +144,106 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 8px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    .logo_nom {
+        width: 100%;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #21304d;
+    }
+
+    .logo_nom h2 {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .liens {
+        width: 100%;
+        gap: 4px;
+        margin-right: 0;
+    }
+
+    .liens a {
+        font-size: 11px;
+    }
+
+    #download {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .app {
+        padding: 12px 0 24px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .hero h1 {
+        font-size: 18px;
+    }
+
+    .lead {
+        font-size: 12px;
+    }
+
+    .scoreboard {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .scoreboard div {
+        padding: 8px;
+    }
+
+    .scoreboard strong {
+        font-size: 1.3rem;
+    }
+
+    .choices {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .choice,
+    .reset {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    footer nav {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    #github {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .copyright {
+        position: static;
+        transform: none;
+        margin: 4px 0;
+        font-size: 10px;
+    }
+}
+
+
 body{
     background-color: #0f172a;
     margin: 0;
@@ -153,8 +270,7 @@ footer nav{
 
 nav img{
     width: 150px;
-    height: fit-content;
-
+    height: auto;
 }
 
 .liens a{
@@ -169,17 +285,18 @@ nav img{
 
 .liens{
     display: flex;
-    width:80%;
+    flex: 1;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
     gap: 30px;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 .logo_nom{
     display: flex;
-    width: 20%;
     align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
 }
 
 .liens a:hover{
@@ -216,7 +333,7 @@ nav img{
 
 #github img{
     width: 50px;
-    height: fit-content;
+    height: auto;
 }
 
 .copyright{
@@ -226,4 +343,230 @@ nav img{
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Inter';
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+main{
+    flex: 1;
+}
+
+nav{
+    width: 100%;
+    min-height: 60px;
+    padding: 12px 20px;
+    align-items: center;
+}
+
+.logo_nom h2{
+    margin: 0;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.app{
+    width: min(920px, calc(100% - 32px));
+}
+
+.hero h1,
+.lead,
+.status,
+.last-round,
+.copyright{
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 1200px) {
+    .app{
+        max-width: 1040px;
+    }
+}
+
+@media (max-width: 1100px) {
+    nav{
+        height: auto;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .liens{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-right: 0;
+    }
+
+    .liens a{
+        font-size: 16px;
+    }
+
+    footer nav{
+        justify-content: center;
+    }
+
+    .copyright{
+        position: static;
+        transform: none;
+        order: 3;
+        width: 100%;
+        padding: 0 12px 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    nav{
+        justify-content: center;
+        padding: 10px 12px;
+    }
+
+    .logo_nom{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .liens{
+        width: 100%;
+    }
+
+    .liens a:hover{
+        transform: none;
+    }
+
+    .app{
+        width: min(100% - 24px, 920px);
+        padding: 18px 0 28px;
+    }
+
+    .card{
+        border-radius: 16px;
+        padding: 16px;
+    }
+
+    .hero h1{
+        font-size: clamp(1.8rem, 10vw, 3rem);
+    }
+
+    .choice:hover,
+    .reset:hover{
+        transform: none;
+    }
+
+    #github{
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    nav img{
+        width: 72px;
+    }
+
+    .logo_nom h2{
+        font-size: 13px;
+    }
+
+    .liens a{
+        font-size: 10px;
+        padding: 4px 5px;
+    }
+
+    .app{
+        width: min(100% - 16px, 920px);
+    }
+
+    .card{
+        padding: 12px;
+    }
+}
+
+/* Navigation commune a toutes les pages */
+nav{
+    min-height: 72px;
+    height: auto;
+    padding: 12px 20px;
+    gap: 16px;
+}
+
+nav .logo_nom img{
+    width: 110px;
+    height: 48px;
+    object-fit: contain;
+}
+
+nav .liens{
+    gap: 24px;
+}
+
+nav .liens a{
+    font-size: 18px;
+}
+
+nav #download{
+    width: 180px;
+    min-height: 34px;
+    height: auto;
+    text-align: center;
+    padding: 6px 12px;
+}
+
+#github img{
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    nav{
+        min-height: 112px;
+        justify-content: center;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    nav .logo_nom{
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0 0 8px;
+    }
+
+    nav .logo_nom img{
+        width: 88px;
+        height: 38px;
+    }
+
+    nav .liens{
+        width: 100%;
+        justify-content: center;
+        gap: 8px 12px;
+    }
+
+    nav .liens a{
+        font-size: 12px;
+    }
+
+    nav #download{
+        width: auto;
+        min-width: 150px;
+        min-height: 30px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    nav .liens a{
+        font-size: 10px;
+    }
+
+    nav #download{
+        width: 100%;
+        max-width: 180px;
+    }
 }
