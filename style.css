@@ -363,3 +363,38 @@ nav img{
     text-align: right;
 }
 
+
+.containerPresentation{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: #162033;
+    border: solid 1px #21304d;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+.icone, .iconeOrdi{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.icone img, .iconeOrdi img{
+    width: 100px;
+    height: fit-content;
+  
+}
+
+.presentationText{
+    font-family: 'Inter';
+    font-size: 17px;
+    color: antiquewhite;
+    letter-spacing: 3px;
+}
+
+#paragraphe1, #paragraphe2, #paragraphe3{
+    margin: 20px;
+}
