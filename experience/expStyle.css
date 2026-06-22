@@ -20,6 +20,13 @@ nav img{
 
 }
 
+.liens #experience{
+    text-decoration: underline;
+    text-decoration-color:#3b82f6;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
 .liens a{
     font-family: 'Inter';
     display: inline-block;
@@ -83,4 +90,163 @@ nav img{
 #github img{
     width: 50px;
     height: fit-content;
+}
+
+
+
+.timelineSection{
+    padding: 30px 50px 70px;
+}
+
+.timeline{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.timeline::before{
+    content: "";
+    position: absolute;
+    left: 104px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.95), rgba(96, 165, 250, 0.25));
+}
+
+.timelineItem{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 40px;
+    align-items: start;
+    position: relative;
+}
+
+.timelineItem::before{
+    content: "";
+    position: absolute;
+    left: 97px;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: 4px solid #0f172a;
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.65);
+}
+
+.timelineYear{
+    font-family: 'Sora';
+    font-size: 24px;
+    font-weight: 700;
+    color: #60a5fa;
+    padding-top: 8px;
+}
+
+.timelineCard{
+    background-color: #162033;
+    border: 1px solid #21304d;
+    border-radius: 18px;
+    padding: 22px 24px;
+    color: antiquewhite;
+    font-family: 'Inter';
+    box-shadow: 0 14px 35px rgba(2, 6, 23, 0.28);
+}
+
+.timelineTag{
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: rgba(59, 130, 246, 0.16);
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.timelineCard h3{
+    margin: 14px 0 8px;
+    font-family: 'Sora';
+    font-size: 28px;
+}
+
+.timelinePlace{
+    margin: 0 0 12px;
+    color: #93c5fd;
+    font-weight: 600;
+}
+
+.timelineCard p{
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .intro{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .intro p{
+        width: 100%;
+    }
+
+    .timelineSection{
+        padding: 20px 20px 50px;
+    }
+
+    .timeline::before{
+        left: 20px;
+    }
+
+    .timelineItem{
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding-left: 44px;
+    }
+
+    .timelineItem::before{
+        left: 12px;
+        top: 12px;
+    }
+
+    .timelineYear{
+        padding-top: 0;
+    }
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    margin-left: 50px;
+
+    
+
+}
+
+.intro h1{
+    color: antiquewhite;
+    font-size: 48px;
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #3b82f6;
+}
+
+.intro h2{
+    color: #3b82f6;
+    font-size: 32px;
+}
+
+.intro p{
+    width: 500px;
+    font-size: 25px;
+    color: aliceblue;
+    letter-spacing: 3px;
+
 }

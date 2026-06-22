@@ -30,6 +30,13 @@ nav img{
     
 }
 
+.liens #index{
+    text-decoration: underline;
+    text-decoration-color: #3b82f6;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
 .liens{
     display: flex;
     width:80%;
