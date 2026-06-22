@@ -86,7 +86,7 @@ body {
 }
 
 .choice {
-    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    background: linear-gradient(135deg, #5865a3, #162033);
     color: white;
 }
 
@@ -98,7 +98,7 @@ body {
 
 .choice:hover,
 .reset:hover {
-    transform: translateY(-1px);
+    transform: translateY(-5px);
     filter: brightness(1.05);
 }
 
@@ -144,6 +144,11 @@ nav{
     background-color: #0b1120;
     font-family: 'Sora';
     color: antiquewhite;
+}
+
+footer nav{
+    position: relative;
+    align-items: center;
 }
 
 nav img{
@@ -212,4 +217,13 @@ nav img{
 #github img{
     width: 50px;
     height: fit-content;
+}
+
+.copyright{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Inter';
 }
