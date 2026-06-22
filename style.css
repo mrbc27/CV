@@ -977,4 +977,63 @@ nav #download{
         width: 100%;
         max-width: 180px;
     }
+
+    .competences{
+        grid-template-rows: 30px 1fr 38px;;
+    }
+}
+
+/* Accueil: cartes empilees et completes sur iPhone */
+@media (max-width: 430px) {
+    .infos{
+        padding: 12px;
+    }
+
+    .infosGrid{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .infoPerso,
+    .competencesGrid,
+    .competences{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .competencesGrid{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .infoPerso,
+    .competences{
+        padding: 14px;
+    }
+
+    .sectionTitle{
+        font-size: 20px;
+    }
+
+    .infoRow{
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .compRow{
+        grid-template-columns: 34px minmax(0, 1fr) 38px;
+        gap: 10px;
+    }
+
+    .skillContent{
+        min-width: 0;
+    }
+
+    .infoPerso img,
+    .competences img{
+        width: 34px;
+        height: 34px;
+    }
 }
