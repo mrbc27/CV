@@ -3,6 +3,9 @@ body{
     margin: 0;
 }
 
+/*--------- Nav Bar---------*/
+
+
 nav{
     display: flex;
     
@@ -63,6 +66,9 @@ nav img{
     font-size: 16px;
     font-family: 'Inter' sans-serif;
 }
+
+/*------- Section Intro-------*/
+
 
 
 .intro{
@@ -139,18 +145,15 @@ nav img{
     color: antiquewhite;
     font-family: 'Sora';
     align-items: center;
+    margin-right: 10px;
 }
-
-
-
-
 
 
 #image img{
     margin-right: 45px;
     width: 360px;
     max-width: 100%;
-    
+
     /* ------------- Fait avec aide IA----------------*/
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -198,4 +201,80 @@ nav img{
     }
 }
 
+/*------- Section INFO ------*/
 
+.infos{
+    padding: 20px 60px;
+}
+
+.sectionTitle{
+    margin: 0 0 12px;
+    font-family: 'Sora';
+    font-size: 32px;
+    color: antiquewhite;
+}
+
+.infosGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 32px;
+
+}
+
+.infoPerso{
+    width: fit-content;
+    background-color:  #162033;
+    border: solid 1px #21304d;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: antiquewhite;
+    font-family: 'Inter';
+}
+
+.infoPerso .sectionTitle{
+    padding-bottom: 12px;
+    border-bottom: 1px solid #21304d;
+}
+
+.infoRow{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 12px 0;
+}
+
+.infoRow:not(:last-child){
+    border-bottom: 1px solid #21304d;
+}
+
+.infoPerso img{
+    width: 50px;
+}
+
+.infoPerso p{
+    margin: 0;
+    
+}
+
+
+.competences{
+    width: 100px;
+    height: 100px;
+    background-color: #162033;
+    border: solid 1px #21304d;
+    border-radius: 15px;
+}
+
+.infoPerso a {
+    font-family: 'Inter';
+    text-decoration: none;
+    color: antiquewhite;
+
+
+
+}
