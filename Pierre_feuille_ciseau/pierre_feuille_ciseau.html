@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Feuille Ciseau</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header>
+        <nav>
+            <div class="logo_nom"> 
+                <img src="../assets/logo.png" alt="logo">
+                <h2>Maël ROBIC</h2>
+            </div>
+
+            <div class="liens">
+                <a href="../index.html">Accueil</a>
+                <a href="../education/education.html">Education</a>
+                <a href="../experience/experience.html">Experience</a>
+                <a href="../projets/projets.html">Projets</a>
+                
+
+            </div>
+        </nav>
+
+    </header>
+    <main class="app">
+        <section class="card hero">
+            <p class="eyebrow">Jeu local</p>
+            <h1>Pierre feuille ciseau</h1>
+            <p class="lead">Jouez 5 manches contre l'ordinateur. Le score s'actualise a chaque tour.</p>
+        </section>
+
+        <section class="card scoreboard" aria-live="polite">
+            <div>
+                <span>Manche</span>
+                <strong id="round">1 / 5</strong>
+            </div>
+            <div>
+                <span>Vous</span>
+                <strong id="human-score">0</strong>
+            </div>
+            <div>
+                <span>Ordinateur</span>
+                <strong id="computer-score">0</strong>
+            </div>
+        </section>
+
+        <section class="card game">
+            <div class="choices" role="group" aria-label="Choisissez votre coup">
+                <button class="choice" data-choice="pierre">Pierre</button>
+                <button class="choice" data-choice="feuille">Feuille</button>
+                <button class="choice" data-choice="ciseau">Ciseau</button>
+            </div>
+
+            <p id="status" class="status">Choisissez votre coup pour lancer la premiere manche.</p>
+            <p id="last-round" class="last-round"></p>
+
+            <button id="reset" class="reset" type="button">Recommencer</button>
+        </section>
+    </main>
+
+    <footer>
+
+        <nav>
+            <div class="logo_nom"> 
+                <img src="../assets/logo.png" alt="logo">
+                <h2>Maël ROBIC</h2>
+            </div>
+
+            <div id="github">
+                <a href="https://github.com/mrbc27"><img src="../assets/github.svg" alt=""></a>
+            </div>
+        </nav>
+
+    </footer>
+</body>
+</html>
