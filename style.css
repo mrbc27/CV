@@ -363,6 +363,7 @@ nav img{
     text-align: right;
 }
 
+/* ------- Présentation ------*/
 
 .containerPresentation{
     display: flex;
@@ -398,3 +399,24 @@ nav img{
 #paragraphe1, #paragraphe2, #paragraphe3{
     margin: 20px;
 }
+
+
+/* ------- Footer --------*/
+
+#github{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 50px;
+    gap: 20px;
+
+}
+
+#github img{
+    width: 50px;
+    height: fit-content;
+}
+
+
+
