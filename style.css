@@ -63,3 +63,139 @@ nav img{
     font-size: 16px;
     font-family: 'Inter' sans-serif;
 }
+
+
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 60px;
+}
+
+
+#pres{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sora';
+    color: antiquewhite;
+    margin-left: 20px;
+    
+}
+
+#image{
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#bonjour{
+    font-size: 18px;
+    color: #3b82f6;
+    margin-bottom: -50px;
+}
+
+#nom{
+    font-size: 72px;
+    margin-bottom: -20px;
+}
+
+#stage{
+    font-size: 38px;
+    color: #3b82f6;
+
+}
+
+#dvpweb{
+    font-size: 24px;
+    margin-top: -10px;
+}
+
+#description{
+    font-size: 20px;
+    width: 650px;
+}
+
+#bouton{
+    display: flex;
+    width: fit-content;
+    background-color: #3b82f6;
+    border-radius: 30px;
+    
+    padding: 7px;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#bouton img{
+    width: 50px;
+    height: fit-content;
+}
+
+#bouton a {
+    display: flex;
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: 'Sora';
+    align-items: center;
+}
+
+
+
+
+
+
+#image img{
+    margin-right: 45px;
+    width: 360px;
+    max-width: 100%;
+    
+    /* ------------- Fait avec aide IA----------------*/
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(59, 130, 246, 0.85);
+    box-shadow:
+        0 0 12px rgba(59, 130, 246, 0.75),
+        0 0 30px rgba(59, 130, 246, 0.55),
+        0 0 55px rgba(37, 99, 235, 0.45);
+    animation: neonPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%,
+    100% {
+        box-shadow:
+            0 0 10px rgba(59, 130, 246, 0.65),
+            0 0 24px rgba(59, 130, 246, 0.45),
+            0 0 46px rgba(37, 99, 235, 0.35);
+    }
+
+    50% {
+        box-shadow:
+            0 0 16px rgba(96, 165, 250, 0.95),
+            0 0 40px rgba(59, 130, 246, 0.75),
+            0 0 70px rgba(37, 99, 235, 0.6);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .intro{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 20px;
+    }
+
+    #image{
+        width: 100%;
+        justify-content: center;
+    }
+
+    #description{
+        width: 100%;
+    }
+}
+
+
