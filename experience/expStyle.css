@@ -250,3 +250,66 @@ nav img{
     letter-spacing: 3px;
 
 }
+
+.competences{
+    padding: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+    background-color: #162033;
+    border: solid 1px #21304d;
+    border-radius: 10px;
+    margin-top: 60px;
+    padding: 30px;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.container h1{
+    grid-column: 1 / -1;
+    margin: 0 0 20px 0;
+    font-family: 'Sora';
+    font-size: 32px;
+    font-weight: 700;
+    color: antiquewhite;
+    padding-top: 0;
+    text-decoration: underline;
+    text-decoration-color: #3b82f6;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+}
+
+.Savoir-faire, .Savoir-être{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.Savoir-faire ul, .Savoir-être ul{
+    list-style: disc;
+    padding-left: 24px;
+    padding-top: 0;
+    margin: 0;
+    color: #3b82f6;
+}
+
+li{
+    font-family: 'Inter';
+    color: antiquewhite;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+li span{
+    font-size: 20px;
+    font-weight: 700;
+}
